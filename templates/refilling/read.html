@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "View" %}{% endblock title %}
+{% block content %}
+<h2>{% trans "refilling" %}</h2>
+<div class="row justify-content-center">
+	<div class="card" style="width:100%">
+		<div class="card-header">	
+			<p>{{ refilling.date_refilling | date:"d.m.Y H:i" }}</p>		
+			<h4>{{ refilling.first_name }} {{ refilling.last_name }}</h4>							
+			<p><strong>{% trans "phone_number" %}</strong>: {{ refilling.phone_number }}</p>			
+			<p><strong>{% trans "telegram_id" %}</strong>: {{ refilling.telegram_id }}</p>			
+		</div>
+		<div class="card-body">
+			<p><strong>{% trans "model" %}</strong>: {{ refilling.model }}</p>			
+		</div>
+		<div class="card-footer">				
+			<p><strong>{% trans "price" %}</strong>: {{ refilling.price }}</p>	
+		</div>		
+	</div>
+	<br>
+	<div class="div-button-center">
+		<a class="btn btn-outline-info" style="width:120px" href="{% url 'refilling_index' %}">{% trans "Back" %}</a> 	
+	</div>	
+</div>
+{% endblock content %}

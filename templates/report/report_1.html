@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "Reports" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<div class="div-width-100-text-center">
+	<h3>{% trans "report_1" %}</h3>
+</div>
+
+<form method="POST" enctype="multipart/form-data">
+	{% csrf_token %}
+	<div style="margin-top:10px">
+		<p>{% trans "Date range" %}:		
+			<input type="date" value="{{start_date}}" name ="start_date" id ="start_date">
+			<input type="date" value="{{finish_date}}" name = "finish_date" id ="finish_date">
+		</p>
+	</div>
+	<div class="row" style="margin-top:10px">
+		<button class="btn btn-outline-success" name="searchBtn" style="width:120px; margin:5px">{% trans "Go" %}</button>
+		<button class="btn btn-outline-primary" name="resetBtn" type="submit" onClick="window.location.reload();" style="width:120px; margin:5px">{% trans "Reset" %}</button>
+	</div>
+</form>
+<hr>
+<div class="row">
+	<h1>{% trans "clients" %}</h1>
+</div>
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "year" %}</p></th>
+				<th><p>{% trans "month" %}</p></th>
+				<th><p>{% trans "joined" %}</p></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for r in report %}
+			<tr>
+				<td><p>{{ r.year }}</p></td>	
+				<td><p>{{ r.month }}</p></td>	
+				<td><p>{{ r.joined }}</p></td>									
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	<p><strong>{% trans "total" %}</strong>: {{ total }}</p>
+</div>		
+<div id="container" style="width: 75%;">
+    <canvas id="bar-chart"></canvas>
+</div>
+<script>
+	var config = {
+	  type: 'bar',
+	  data: {
+		datasets: [{
+		  data: {{ data|safe }},
+		  backgroundColor: [
+			'#4B0082', '#800080', '#9932CC', '#8A2BE2', '#9370DB', '#BA55D3', 
+			'#FF00FF', '#EE82EE', '#DDA0DD', '#4B0082', '#800080', '#9932CC'
+		  ],
+		  label: '{% trans "clients" %}'
+		}],
+		labels: {{ labels|safe }}
+	  },
+	  options: {
+		responsive: true,
+		scales: {
+          yAxes: [{
+           ticks: {
+             beginAtZero:true
+           }
+          }],
+          xAxes: [{
+            display: true,
+          }],
+        },
+	  }
+	};
+	window.onload = function() {
+	  var ctx = document.getElementById('bar-chart').getContext('2d');
+	  window.myPie = new Chart(ctx, config);
+	};
+</script>
+{% endblock content %}

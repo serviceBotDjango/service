@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "View" %}{% endblock title %}
+{% block content %}
+<h2>{% trans "review" %}</h2>
+<div class="row justify-content-center">
+		<div class="card" style="width:100%">
+		<div class="card-header">	
+			<p>{{ review.date_review | date:"d.m.Y H:i" }}</p>		
+			<h4>{{ review.first_name }} {{ review.last_name }}</h4>							
+			<p><strong>{% trans "phone_number" %}</strong>: {{ review.phone_number }}</p>			
+			<p><strong>{% trans "telegram_id" %}</strong>: {{ review.telegram_id }}</p>			
+		</div>
+		<div class="card-body">
+			<p>{{ review.details }}</p>			
+		</div>
+		<div class="card-footer">
+			{% if review.rating != None %}
+				<p><div class="Stars" style='--rating: {{ review.rating | stringformat:".1f" }};'></div></p>
+			{% endif %}		
+		</div>		
+	</div>
+
+	<br>
+	<div class="div-button-center">
+		<a class="btn btn-outline-info" style="width:120px" href="{% url 'review_index' %}">{% trans "Back" %}</a> 	
+	</div>	
+</div>
+{% endblock content %}

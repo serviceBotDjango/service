@@ -1,0 +1,390 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-10 21:34+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+#: .\customer\models.py:37 .\customer\models.py:59 .\customer\models.py:101
+#: .\customer\models.py:125 .\customer\models.py:152 .\customer\models.py:172
+#: .\customer\models.py:195 .\customer\models.py:215
+#: .\templates\application\edit.html:14 .\templates\application\index.html:12
+#: .\templates\application\read.html:12 .\templates\customer\index.html:16
+#: .\templates\customer\read.html:13 .\templates\log\index.html:16
+#: .\templates\log\read.html:14 .\templates\refilling\edit.html:14
+#: .\templates\refilling\index.html:13 .\templates\refilling\read.html:12
+#: .\templates\review\index.html:13 .\templates\review\read.html:12
+msgid "telegram_id"
+msgstr "Telegram ID"
+
+#: .\customer\models.py:38 .\customer\models.py:126 .\customer\models.py:173
+#: .\customer\models.py:216 .\templates\application\edit.html:13
+#: .\templates\application\read.html:11 .\templates\customer\index.html:15
+#: .\templates\customer\read.html:12 .\templates\log\index.html:15
+#: .\templates\log\read.html:13 .\templates\refilling\edit.html:13
+#: .\templates\refilling\read.html:11 .\templates\review\read.html:11
+msgid "phone_number"
+msgstr "Телефон нөмірі"
+
+#: .\customer\models.py:39 .\customer\models.py:127 .\customer\models.py:174
+#: .\customer\models.py:217 .\templates\customer\index.html:13
+#: .\templates\log\index.html:13
+msgid "first_name"
+msgstr "Аты"
+
+#: .\customer\models.py:40 .\customer\models.py:128 .\customer\models.py:175
+#: .\customer\models.py:218 .\templates\customer\index.html:14
+#: .\templates\log\index.html:14
+msgid "last_name"
+msgstr "Тегі"
+
+#: .\customer\models.py:41 .\customer\models.py:129 .\customer\models.py:176
+#: .\customer\models.py:219 .\templates\customer\index.html:12
+#: .\templates\customer\read.html:14
+msgid "date_joined"
+msgstr "Тіркеу күні"
+
+#: .\customer\models.py:58 .\templates\log\index.html:12
+#: .\templates\log\read.html:9
+msgid "date_log"
+msgstr "Күні"
+
+#: .\customer\models.py:60
+msgid "log_kind"
+msgstr "Санат"
+
+#: .\customer\models.py:61
+msgid "log_event"
+msgstr "Оқиға"
+
+#: .\customer\models.py:78 .\templates\device_type\index.html:14
+msgid "device_type_title"
+msgstr "Құрылғы түрінің атауы"
+
+#: .\customer\models.py:89 .\templates\manufacturer\index.html:14
+msgid "manufacturer_title"
+msgstr "Өндірушінің аты"
+
+#: .\customer\models.py:100 .\customer\models.py:124
+#: .\templates\application\index.html:11
+msgid "date_application"
+msgstr "Өтініш беру күні"
+
+#: .\customer\models.py:102 .\customer\models.py:130
+#: .\templates\application\edit.html:17 .\templates\application\read.html:15
+#: .\templates\device_type\create.html:5 .\templates\device_type\edit.html:5
+#: .\templates\device_type\read.html:5
+msgid "device_type"
+msgstr "Құрылғы түрі"
+
+#: .\customer\models.py:103 .\customer\models.py:131
+#: .\templates\application\edit.html:18 .\templates\application\read.html:16
+#: .\templates\manufacturer\create.html:5 .\templates\manufacturer\edit.html:5
+#: .\templates\manufacturer\read.html:5
+msgid "manufacturer"
+msgstr "Өндіруші"
+
+#: .\customer\models.py:104 .\customer\models.py:132
+msgid "application_model"
+msgstr "Құрылғы үлгісі"
+
+#: .\customer\models.py:105 .\customer\models.py:133
+msgid "application_problem"
+msgstr "Бұзылыс"
+
+#: .\customer\models.py:106 .\customer\models.py:134
+msgid "application_solution"
+msgstr "Жөндеу белгісі"
+
+#: .\customer\models.py:107 .\customer\models.py:135
+msgid "application_price"
+msgstr "Жөндеу құны"
+
+#: .\customer\models.py:151 .\customer\models.py:171
+#: .\templates\refilling\index.html:12
+msgid "date_refilling"
+msgstr "Өтініш беру күні"
+
+#: .\customer\models.py:153 .\customer\models.py:177
+msgid "refilling_model"
+msgstr "Картридж үлгісі"
+
+#: .\customer\models.py:154 .\customer\models.py:178
+msgid "refilling_price"
+msgstr "Қайта толтыру құны"
+
+#: .\customer\models.py:194 .\customer\models.py:214
+#: .\templates\review\index.html:12
+msgid "date_review"
+msgstr "Күні"
+
+#: .\customer\models.py:196 .\customer\models.py:220
+#: .\templates\review\index.html:14
+msgid "review_details"
+msgstr "Мәтінді қайталау"
+
+#: .\customer\models.py:197 .\customer\models.py:221
+#: .\templates\review\index.html:15
+msgid "rating"
+msgstr "Баға"
+
+#: .\templates\application\edit.html:3 .\templates\application\index.html:31
+#: .\templates\device_type\edit.html:3 .\templates\device_type\index.html:24
+#: .\templates\manufacturer\edit.html:3 .\templates\manufacturer\index.html:24
+#: .\templates\refilling\edit.html:3 .\templates\refilling\index.html:28
+msgid "Change"
+msgstr "Өзгерту"
+
+#: .\templates\application\edit.html:5 .\templates\application\read.html:5
+msgid "application"
+msgstr "Қолдану"
+
+#: .\templates\application\edit.html:19 .\templates\application\read.html:17
+#: .\templates\refilling\edit.html:17 .\templates\refilling\index.html:14
+#: .\templates\refilling\read.html:15
+msgid "model"
+msgstr "Үлгі"
+
+#: .\templates\application\edit.html:20 .\templates\application\index.html:14
+#: .\templates\application\read.html:18
+msgid "problem"
+msgstr "Бұзылыс"
+
+#: .\templates\application\edit.html:30 .\templates\device_type\create.html:12
+#: .\templates\device_type\edit.html:12
+#: .\templates\manufacturer\create.html:12
+#: .\templates\manufacturer\edit.html:12 .\templates\refilling\edit.html:28
+msgid "Save"
+msgstr "Сақтау"
+
+#: .\templates\application\edit.html:31 .\templates\application\read.html:27
+#: .\templates\customer\read.html:21 .\templates\device_type\create.html:13
+#: .\templates\device_type\edit.html:13 .\templates\device_type\read.html:18
+#: .\templates\log\read.html:23 .\templates\manufacturer\create.html:13
+#: .\templates\manufacturer\edit.html:13 .\templates\manufacturer\read.html:18
+#: .\templates\refilling\edit.html:29 .\templates\refilling\read.html:23
+#: .\templates\review\read.html:26
+msgid "Back"
+msgstr "Артқа"
+
+#: .\templates\application\index.html:3 .\templates\customer\index.html:3
+#: .\templates\device_type\index.html:3 .\templates\log\index.html:3
+#: .\templates\manufacturer\index.html:3 .\templates\refilling\index.html:3
+#: .\templates\review\index.html:3
+msgid "List"
+msgstr "Тізім"
+
+#: .\templates\application\index.html:6 .\templates\base.html:59
+#: .\templates\report\report_2.html:26 .\templates\report\report_2.html:34
+#: .\templates\report\report_2.html:62
+msgid "applications"
+msgstr "Қолданбалар"
+
+#: .\templates\application\index.html:13
+msgid "device"
+msgstr "Құрылғы"
+
+#: .\templates\application\index.html:15 .\templates\application\read.html:21
+msgid "solution"
+msgstr "Жөндеу белгісі"
+
+#: .\templates\application\index.html:16 .\templates\application\read.html:22
+#: .\templates\refilling\index.html:15 .\templates\refilling\read.html:18
+msgid "price"
+msgstr "Бағасы"
+
+#: .\templates\application\index.html:32 .\templates\application\read.html:3
+#: .\templates\customer\index.html:30 .\templates\customer\read.html:3
+#: .\templates\device_type\index.html:25 .\templates\device_type\read.html:3
+#: .\templates\log\index.html:34 .\templates\log\read.html:3
+#: .\templates\manufacturer\index.html:25 .\templates\manufacturer\read.html:3
+#: .\templates\refilling\index.html:29 .\templates\refilling\read.html:3
+#: .\templates\review\index.html:32 .\templates\review\read.html:3
+msgid "View"
+msgstr "Көру"
+
+#: .\templates\application\index.html:33 .\templates\device_type\index.html:26
+#: .\templates\manufacturer\index.html:26 .\templates\refilling\index.html:30
+#: .\templates\review\index.html:33
+msgid "Delete"
+msgstr "Жою"
+
+#: .\templates\base.html:46
+msgid "Home"
+msgstr "Үй"
+
+#: .\templates\base.html:48
+msgid "contacts"
+msgstr "Контактілер"
+
+#: .\templates\base.html:57 .\templates\device_type\index.html:6
+msgid "device_types"
+msgstr "Құрылғы түрлері"
+
+#: .\templates\base.html:58 .\templates\manufacturer\index.html:6
+msgid "manufacturers"
+msgstr "Өндірушілер"
+
+#: .\templates\base.html:60 .\templates\refilling\index.html:6
+#: .\templates\report\report_3.html:26 .\templates\report\report_3.html:34
+#: .\templates\report\report_3.html:62
+msgid "refillings"
+msgstr "Картридждерді толтыруға арналған қосымшалар"
+
+#: .\templates\base.html:61 .\templates\report\report_4.html:26
+#: .\templates\report\report_4.html:34 .\templates\report\report_4.html:75
+#: .\templates\review\index.html:6
+msgid "reviews"
+msgstr "Пікірлер"
+
+#: .\templates\base.html:63 .\templates\report\report_1.html:8
+msgid "report_1"
+msgstr "Есеп: Клиенттер"
+
+#: .\templates\base.html:64 .\templates\report\report_2.html:8
+msgid "report_2"
+msgstr "Есеп: Жөндеуге арналған сұраныстар"
+
+#: .\templates\base.html:65 .\templates\report\report_3.html:8
+msgid "report_3"
+msgstr "Есеп: Картриджді толтыруға арналған қолданбалар"
+
+#: .\templates\base.html:66 .\templates\report\report_4.html:8
+msgid "report_4"
+msgstr "Есеп: Тұтынушы рейтингтері"
+
+#: .\templates\base.html:67 .\templates\customer\index.html:6
+msgid "customers"
+msgstr "Клиенттер"
+
+#: .\templates\base.html:68 .\templates\log\index.html:6
+msgid "logs"
+msgstr "Журнал"
+
+#: .\templates\base.html:72
+msgid "My account"
+msgstr "Менің аккаунтым"
+
+#: .\templates\base.html:73
+msgid "Change password"
+msgstr "Құпия сөзді өзгерту"
+
+#: .\templates\base.html:75
+msgid "Log out"
+msgstr "Шығу"
+
+#: .\templates\base.html:80
+msgid "Log In"
+msgstr "Кіру үшін"
+
+#: .\templates\base.html:81
+msgid "Sign up"
+msgstr "Тіркелу"
+
+#: .\templates\contact.html:7
+msgid "Contacts"
+msgstr "Контактілер"
+
+#: .\templates\customer\read.html:5
+msgid "customer"
+msgstr "Клиент"
+
+#: .\templates\device_type\create.html:3 .\templates\device_type\index.html:7
+#: .\templates\manufacturer\create.html:3
+#: .\templates\manufacturer\index.html:7
+msgid "Add"
+msgstr "Қосу"
+
+#: .\templates\index.html:4 .\templates\registration\logged_out.html:4
+#: .\templates\registration\login.html:4
+#: .\templates\registration\password_change_done.html:3
+#: .\templates\registration\password_change_form.html:3
+#: .\templates\registration\password_reset_complete.html:4
+#: .\templates\registration\password_reset_confirm.html:4
+#: .\templates\registration\password_reset_done.html:4
+#: .\templates\registration\password_reset_form.html:4
+#: .\templates\registration\register_done.html:4
+msgid "App Name"
+msgstr "Service"
+
+#: .\templates\log\index.html:17 .\templates\log\read.html:15
+msgid "kind"
+msgstr "Санат"
+
+#: .\templates\log\index.html:18 .\templates\log\read.html:16
+msgid "event"
+msgstr "Оқиға"
+
+#: .\templates\log\read.html:5
+msgid "log"
+msgstr "Журнал"
+
+#: .\templates\refilling\edit.html:5 .\templates\refilling\read.html:5
+msgid "refilling"
+msgstr "Картриджді толтыру туралы сұрау"
+
+#: .\templates\report\report_1.html:4 .\templates\report\report_2.html:4
+#: .\templates\report\report_3.html:4 .\templates\report\report_4.html:4
+msgid "Reports"
+msgstr "Есептер"
+
+#: .\templates\report\report_1.html:14 .\templates\report\report_2.html:14
+#: .\templates\report\report_3.html:14 .\templates\report\report_4.html:14
+msgid "Date range"
+msgstr "Күндер ауқымы"
+
+#: .\templates\report\report_1.html:20 .\templates\report\report_2.html:20
+#: .\templates\report\report_3.html:20 .\templates\report\report_4.html:20
+msgid "Go"
+msgstr "Орындау"
+
+#: .\templates\report\report_1.html:21 .\templates\report\report_2.html:21
+#: .\templates\report\report_3.html:21 .\templates\report\report_4.html:21
+msgid "Reset"
+msgstr "Болдырмау"
+
+#: .\templates\report\report_1.html:26 .\templates\report\report_1.html:62
+msgid "clients"
+msgstr "Клиенттер"
+
+#: .\templates\report\report_1.html:32 .\templates\report\report_2.html:32
+#: .\templates\report\report_3.html:32 .\templates\report\report_4.html:32
+msgid "year"
+msgstr "Жыл"
+
+#: .\templates\report\report_1.html:33 .\templates\report\report_2.html:33
+#: .\templates\report\report_3.html:33 .\templates\report\report_4.html:33
+msgid "month"
+msgstr "Ай"
+
+#: .\templates\report\report_1.html:34
+msgid "joined"
+msgstr "Тіркелген"
+
+#: .\templates\report\report_1.html:47 .\templates\report\report_2.html:47
+#: .\templates\report\report_3.html:47 .\templates\report\report_4.html:59
+msgid "total"
+msgstr "Барлығы"
+
+#: .\templates\report\report_4.html:35
+msgid "avg_rating"
+msgstr "Орташа рейтинг"
+
+#: .\templates\report\report_4.html:60
+msgid "avg"
+msgstr "Орташа рейтинг"
+
+#: .\templates\review\read.html:5
+msgid "review"
+msgstr "Қарау"

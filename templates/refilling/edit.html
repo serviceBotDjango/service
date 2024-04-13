@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Change" %}{% endblock title %}
+{% block content %}
+<h2>{% trans "refilling" %}</h2>
+<p>{{ refilling }}</p>
+<form method="POST" enctype="multipart/form-data">
+	{% csrf_token %}
+	<div class="card" style="width:100%">
+		<div class="card-header">	
+			<p>{{ view_refilling.date_refilling | date:"d.m.Y H:i" }}</p>		
+			<h4>{{ view_refilling.first_name }} {{ view_refilling.last_name }}</h4>							
+			<p><strong>{% trans "phone_number" %}</strong>: {{ view_refilling.phone_number }}</p>			
+			<p><strong>{% trans "telegram_id" %}</strong>: {{ view_refilling.telegram_id }}</p>			
+		</div>
+		<div class="card-body">
+			<p><strong>{% trans "model" %}</strong>: {{ view_refilling.model }}</p>			
+		</div>
+		<div class="card-footer">				
+			<table>
+				{{ form }}
+			</table>
+		</div>		
+	</div>
+	
+
+	<div class="div-button-center">
+		<button type="submit" class="btn btn-outline-success" style="width:120px">{% trans "Save" %}</button>	
+		<a class="btn btn-outline-info" style="width:120px" href="{% url 'refilling_index' %}">{% trans "Back" %}</a> 	
+	</div>	
+</form>
+{% endblock content %}

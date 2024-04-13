@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "List" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "reviews" %}</h2>
+{% if review.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "date_review" %}</p></th>
+				<th><p>{% trans "telegram_id" %}</p></th>
+				<th><p>{% trans "review_details" %}</p></th>
+				<th><p>{% trans "rating" %}</p></th>
+				<th><p></p></th>				
+			</tr>
+		</thead>
+		<tbody>
+			{% for p in review %}
+			<tr>
+				<td><p>{{ p.date_review | date:"d.m.Y H:i" }}</p></td>	
+				<td><p>{{ p.telegram_id }}</p><p>{{ p.first_name }}<br>{{ p.last_name }}<br>{{ p.phone_number }}<br></p></td>	
+				<td><p>{{ p.details }}</p></td>	
+				<td><p>
+					{% if p.rating != None %}
+						<p><div class="Stars" style='--rating: {{ p.rating | stringformat:".1f" }};'></div></p>
+					{% endif %}
+				</p></td>	
+				<td>						
+					<p>
+					<a href="{% url 'review_read' p.id %}">{% trans "View" %}</a> |
+					<a onclick="return confirm('Удалить запись?')" href="{% url 'review_delete' p.id %}">{% trans "Delete" %}</a>
+					</p>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endif %}
+{% endblock content %}
+
