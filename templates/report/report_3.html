@@ -26,7 +26,7 @@
 	<h1>{% trans "refillings" %}</h1>
 </div>
 <div class="row">
-	<table id="myTable" class="table-manager" style="width:100%">
+	<table id="table" class="table-manager" style="width:100%">
 		<thead>
 			<tr>
 				<th><p>{% trans "year" %}</p></th>
@@ -37,8 +37,8 @@
 		<tbody>
 			{% for r in report %}
 			<tr>
-				<td><p>{{ r.year }}</p></td>	
-				<td><p>{{ r.month }}</p></td>	
+				<td><p>{{ r.year | floatformat:0 }}</p></td>	
+				<td><p>{{ r.month | floatformat:0 }}</p></td>	
 				<td><p>{{ r.refilling }}</p></td>									
 			</tr>
 			{% endfor %}

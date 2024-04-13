@@ -509,13 +509,24 @@ def report_1(request):
                 if where != "":
                     where = " WHERE " + where + " "              
                 print(where)
+# SQLite
+#        report = Customer.objects.raw("""
+#SELECT 1 as id, strftime('%Y', date_joined) AS year, strftime('%m', date_joined) AS month, COUNT(*) AS joined
+#FROM customer
+#""" 
+#+ where +
+#"""
+#GROUP BY strftime('%Y', date_joined), strftime('%m', date_joined)
+#""")
+# PostgreSQL
         report = Customer.objects.raw("""
-SELECT 1 as id, strftime('%Y', date_joined) AS year, strftime('%m', date_joined) AS month, COUNT(*) AS joined
+SELECT 1 as id, date_part('year', date_joined) AS year, date_part('month', date_joined) AS month, COUNT(*) AS joined
 FROM customer
 """ 
 + where +
 """
-GROUP BY strftime('%Y', date_joined), strftime('%m', date_joined)
+GROUP BY date_part('year', date_joined), date_part('month', date_joined)
+ORDER BY date_part('year', date_joined), date_part('month', date_joined)
 """)
         labels = []
         data = []
@@ -558,13 +569,24 @@ def report_2(request):
                 if where != "":
                     where = " WHERE " + where + " "              
                 print(where)
+# SQLite
+#        report = Application.objects.raw("""
+#SELECT 1 as id, strftime('%Y', date_application) AS year, strftime('%m', date_application) AS month, COUNT(*) AS application
+#FROM application
+#""" 
+#+ where +
+#"""
+#GROUP BY strftime('%Y', date_application), strftime('%m', date_application)
+#""")
+# PostgreSQL
         report = Application.objects.raw("""
-SELECT 1 as id, strftime('%Y', date_application) AS year, strftime('%m', date_application) AS month, COUNT(*) AS application
+SELECT 1 as id, date_part('year', date_application) AS year, date_part('month', date_application) AS month, COUNT(*) AS application
 FROM application
 """ 
 + where +
 """
-GROUP BY strftime('%Y', date_application), strftime('%m', date_application)
+GROUP BY date_part('year', date_application), date_part('month', date_application)
+ORDER BY date_part('year', date_application), date_part('month', date_application)
 """)
         labels = []
         data = []
@@ -607,13 +629,24 @@ def report_3(request):
                 if where != "":
                     where = " WHERE " + where + " "              
                 print(where)
+# SQLite
+#        report = Refilling.objects.raw("""
+#SELECT 1 as id, strftime('%Y', date_refilling) AS year, strftime('%m', date_refilling) AS month, COUNT(*) AS refilling
+#FROM refilling
+#""" 
+#+ where +
+#"""
+#GROUP BY strftime('%Y', date_refilling), strftime('%m', date_refilling)
+#""")
+# PostgreSQL
         report = Refilling.objects.raw("""
-SELECT 1 as id, strftime('%Y', date_refilling) AS year, strftime('%m', date_refilling) AS month, COUNT(*) AS refilling
+SELECT 1 as id, date_part('year', date_refilling) AS year, date_part('month', date_refilling) AS month, COUNT(*) AS refilling
 FROM refilling
 """ 
 + where +
 """
-GROUP BY strftime('%Y', date_refilling), strftime('%m', date_refilling)
+GROUP BY date_part('year', date_refilling), date_part('month', date_refilling)
+ORDER BY date_part('year', date_refilling), date_part('month', date_refilling)
 """)
         labels = []
         data = []
@@ -659,13 +692,24 @@ def report_4(request):
                 if where != "":
                     where = " WHERE " + where + " "              
                 print(where)
+# SQLite
+#        report = Review.objects.raw("""
+#SELECT 1 as id, strftime('%Y', date_review) AS year, strftime('%m', date_review) AS month, COUNT(*) AS review, AVG(rating) AS avg_rating
+#FROM review
+#""" 
+#+ where +
+#"""
+#GROUP BY strftime('%Y', date_review), strftime('%m', date_review)
+#""")
+# PostgreSQL
         report = Review.objects.raw("""
-SELECT 1 as id, strftime('%Y', date_review) AS year, strftime('%m', date_review) AS month, COUNT(*) AS review, AVG(rating) AS avg_rating
+SELECT 1 as id, date_part('year', date_review) AS year, date_part('month', date_review) AS month, COUNT(*) AS review, AVG(rating) AS avg_rating
 FROM review
 """ 
 + where +
 """
-GROUP BY strftime('%Y', date_review), strftime('%m', date_review)
+GROUP BY date_part('year', date_review), date_part('month', date_review)
+ORDER BY date_part('year', date_review), date_part('month', date_review)
 """)
         labels = []
         data = []

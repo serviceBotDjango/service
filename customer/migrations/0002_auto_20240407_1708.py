@@ -123,7 +123,7 @@ def new_data(apps, schema_editor):
     try:
         # Суперпользователь id=1
         user = User.objects.create_superuser(username='root',
-        email='integra100124@mail.ru',
+        email='service.bot.django@mail.ru',
         first_name='Руслан', 
         last_name='Кусаинов',
         password='SsNn5678+-@')
