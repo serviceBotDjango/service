@@ -22,7 +22,11 @@
 				<td><p>{{ p.date_refilling | date:"d.m.Y H:i" }}</p></td>	
 				<td><p>{{ p.telegram_id }}</p><p>{{ p.first_name }}<br>{{ p.last_name }}<br>{{ p.phone_number }}<br></p></td>	
 				<td><p>{{ p.model }}</p></td>	
-				<td><p>{{ p.price }}</p></td>	
+				<td>
+					{% if p.price != None %}
+						<p>{{ p.price }}</p>
+					{% endif %}				
+				</td>	
 				<td>						
 					<p>
 					<a href="{% url 'refilling_edit' p.id %}">{% trans "Change" %}</a> |

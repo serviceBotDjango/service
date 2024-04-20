@@ -15,7 +15,11 @@
 			<p><strong>{% trans "model" %}</strong>: {{ refilling.model }}</p>			
 		</div>
 		<div class="card-footer">				
-			<p><strong>{% trans "price" %}</strong>: {{ refilling.price }}</p>	
+			<p><strong>{% trans "price" %}</strong>: 
+				{% if refilling.price != None %}
+					{{ refilling.price }}
+				{% endif %}	
+			</p>	
 		</div>		
 	</div>
 	<br>

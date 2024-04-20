@@ -18,8 +18,16 @@
 			<p><strong>{% trans "problem" %}</strong>: {{ application.problem }}</p>			
 		</div>
 		<div class="card-footer">				
-			<p><strong>{% trans "solution" %}</strong>: {{ application.solution }}</p>			
-			<p><strong>{% trans "price" %}</strong>: {{ application.price }}</p>	
+			<p><strong>{% trans "solution" %}</strong>: 
+				{% if application.solution != None %}
+					{{ application.solution }}
+				{% endif %}	
+			</p>	
+			<p><strong>{% trans "price" %}</strong>: 
+				{% if application.price != None %}
+					{{ application.price }}
+				{% endif %}	
+			</p>	
 		</div>		
 	</div>
 	<br>
