@@ -24,8 +24,19 @@
 				<td><p>{{ p.telegram_id }}</p><p>{{ p.first_name }}<br>{{ p.last_name }}<br>{{ p.phone_number }}<br></p></td>	
 				<td><p>{{ p.device_type }}<br>{{ p.manufacturer }}<br>{{ p.model }}</p></td>	
 				<td><p>{{ p.problem }}</p></td>	
-				<td><p>{{ p.solution }}</p></td>	
-				<td><p>{{ p.price }}</p></td>	
+				<td><p>
+					{% if p.solution != None %}
+						{{ p.solution }}
+						<p>{{ p.solution }}</p>
+					{% endif %}
+				
+				</p></td>	
+				<td>
+					{% if p.price != None %}
+						<p>{{ p.price }}</p>
+					{% endif %}
+				
+				</td>	
 				<td>						
 					<p>
 					<a href="{% url 'application_edit' p.id %}">{% trans "Change" %}</a> |
